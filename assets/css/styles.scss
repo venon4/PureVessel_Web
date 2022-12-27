@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    cursor: url('/assets/media/pointer.png'), default;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    background: #111;
+    color: #fff;
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 42px;
+}
+
+.rxps {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.glowing-icons a {
+    cursor: url('../media/link.png'), default;
+    position: relative;
+    background: #202020;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #808080;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.glowing-icons i {
+    font-size: 2.5rem;
+}
+
+.glowing-icons a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: 0.5s;
+    transform: scale(0.9);
+    z-index: -1;
+}
+
+.glowing-icons a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #000000;
+}
+
+.glowing-icons a:hover {
+    color: #f9f6f6;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        font-size: 42px;
+    }
+    .rxps {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        margin: 0rem 0.5rem 1rem 0.5rem;
+    }
+    .glowing-icons a {
+        width: 55px;
+        height: 55px;
+    }
+    .glowing-icons i {
+        font-size: 1.5rem;
+    }
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.video-container {
+    z-index: 1;
+}
+
+.text-container {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 0px solid;
+    display: table;
+}
+
+.content {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.iconVolume {
+    font-size: 30px !important;
+    cursor: url('../media/link.png'), default;
+}
+
+#video_cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    background: url('../media/video_cover.gif') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#video-container {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@-webkit-keyframes glitchy {
+    0% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+    25% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px)
+    }
+    50% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px)
+    }
+    75% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px)
+    }
+    to {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+}
+
+@keyframes glitchy {
+    0% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+    25% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px)
+    }
+    50% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px)
+    }
+    75% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px)
+    }
+    to {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container video {
+        width: 100vw;
+        height: auto;
+    }
+}
